@@ -72,7 +72,7 @@ const ItemContainer = styled.div`
 `;
 
 const SidebarContainer = styled.div<{ isOpen: boolean }>`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 280px;
@@ -84,7 +84,7 @@ const SidebarContainer = styled.div<{ isOpen: boolean }>`
 `;
 
 const Overlay = styled.div<{ isOpen: boolean }>`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
