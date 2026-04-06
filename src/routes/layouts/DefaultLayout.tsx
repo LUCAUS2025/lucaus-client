@@ -1,3 +1,4 @@
+import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { TheFooter } from '../../components/TheFooter';
 import styled from 'styled-components';
@@ -14,6 +15,7 @@ const LayoutContent = () => {
   return (
     <LayoutDom>
       {!hideHeader && <TheHeader />}
+      <TheSidebar />
       <Content hideHeader={hideHeader}>
         <Outlet />
       </Content>
@@ -27,7 +29,6 @@ export const DefaultLayout = () => {
     <AppDom>
       <MenuProvider>
         <HeaderProvider>
-          <TheSidebar />
           <LayoutContent />
         </HeaderProvider>
       </MenuProvider>
@@ -46,8 +47,6 @@ const LayoutDom = styled.div`
 `;
 
 const AppDom = styled.div`
-  position: relative;
-  overflow: hidden;
   width: min(100vw, 600px);
   height: 100vh;
   margin: 0 auto;
